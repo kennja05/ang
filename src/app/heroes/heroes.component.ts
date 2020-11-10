@@ -9,13 +9,19 @@ import {HEROES} from '../mock-heroes'
 })
 export class HeroesComponent implements OnInit {
 
-  heroes = HEROES
+  heroes = HEROES;
+  
+  selectedHero: Hero;
+  
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 
-  //lines 16-19 are auto generated, but seem to create
+  //lines below are auto generated, but seem to create
   //issues with using the list iterator *ngFor
-  // constructor() { }
+  constructor() { }
 
-  // ngOnInit(): void {
-  // }
+  ngOnInit(): void {
+  }
    
 }
