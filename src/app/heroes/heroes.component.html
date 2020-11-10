@@ -1,1 +1,8 @@
-{{hero}}
+<div>
+    <label>Name: 
+        <!-- ngModel is Angular's two way data binding syntax -->
+        <!-- look for this in app.module.ts -->
+        <input [(ngModel)]="hero.name" placeholder='name'/>
+    </label>
+
+</div>
