@@ -17,8 +17,6 @@ export class HeroesComponent implements OnInit {
     this.selectedHero = hero;
   }
 
-  //lines below are auto generated, but seem to create
-  //issues with using the list iterator *ngFor
   constructor() { }
 
   ngOnInit(): void {
