@@ -1,13 +1,8 @@
-<h2>Heroes</h2>
-<ul class='heroes'>
-    <li *ngFor="let hero of heroes"
-        [class.selected]="hero === selectedHero"
-        (click)="onSelect(hero)">
-        <span class="badge">{{hero.id}}</span> {{hero.name}}
-    </li>
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </li>
 </ul>
-
-<!-- "[hero]='selectedHero'" is an example of property binding
-without the brackets angular treats the right side as a string 
-literal. -->
-<app-hero-detail [hero]='selectedHero'></app-hero-detail>
